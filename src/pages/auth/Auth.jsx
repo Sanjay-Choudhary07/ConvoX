@@ -1,6 +1,7 @@
 import React from 'react'
 // import login from '../../assets/login2.png';
 import victory from '../../assets/victory.svg';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs';
 
 const Auth = () => {
   return (
@@ -16,7 +17,21 @@ const Auth = () => {
                   Fill in the details to get started with the best chat app!
                 </p>
             </div>
-            <div className='flex items-center justify-center w-full'></div>
+            <div className='flex items-center justify-center w-full'>
+              <Tabs className='w-3/4'>
+                <TabsList className='bg-transparent rounded-none w-full'>
+                  <TabsTrigger value='Login' className='data-[state=active]:bg-transparent text-black text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-black
+                  data-[state=active]:font-semibold data-[state=active]:border-b-purple-500
+                  p-3 transition-all duration-300'>Login</TabsTrigger>
+                  <TabsTrigger value='Signup' className='data-[state=active]:bg-transparent
+                  text-black text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-black
+                  data-[state=active]:font-semibold data-[state=active]:border-b-purple-500
+                  p-3 transition-all duration-300'>Signup</TabsTrigger>
+                </TabsList>
+                <TabsContent className='' value='Login'></TabsContent>
+                <TabsContent className='' value='Signup'></TabsContent>
+              </Tabs>
+            </div>
         </div>
       </div>
     </div>
